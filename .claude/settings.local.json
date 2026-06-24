@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -L -o highlight.min.js \"https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js\")",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(cp -r DVBBS8.3_AC/程序源文件/inc/Dv_Security.asp Dvbbs8.3_Sql/程序源文件/inc/)",
+      "Bash(cp -r DVBBS8.3_AC/程序源文件/inc/Dv_Markdown.asp Dvbbs8.3_Sql/程序源文件/inc/)",
+      "Bash(cp -r DVBBS8.3_AC/程序源文件/inc/markdown.js Dvbbs8.3_Sql/程序源文件/inc/)",
+      "Bash(cp -r DVBBS8.3_AC/程序源文件/inc/markdown-editor.js Dvbbs8.3_Sql/程序源文件/inc/)",
+      "Bash(cp -r DVBBS8.3_AC/程序源文件/inc/markdown.css Dvbbs8.3_Sql/程序源文件/inc/)"
+    ]
+  }
+}

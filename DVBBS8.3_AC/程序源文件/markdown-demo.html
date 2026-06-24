@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="GB2312">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVBBS Markdown编辑器 - 完整示例</title>
+
+    <!-- Markdown编辑器样式 -->
+    <link rel="stylesheet" href="inc/markdown.css">
+
+    <!-- 代码高亮主题（已内嵌到markdown.css中，此行可选） -->
+    <!-- <link rel="stylesheet" href="inc/highlight-theme.css"> -->
+
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        .demo-section {
+            margin: 30px 0;
+        }
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .editor-wrapper {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 DVBBS Markdown编辑器示例</h1>
+
+        <div class="info-box">
+            <strong>✅ 功能说明：</strong><br/>
+            1. 支持完整的Markdown语法<br/>
+            2. 内置代码高亮（JavaScript, Python, Java, HTML, CSS, SQL, PHP等）<br/>
+            3. 实时预览功能<br/>
+            4. 无需外部依赖，纯本地运行
+        </div>
+
+        <div class="demo-section">
+            <h2>📝 编辑器模式选择</h2>
+            <div class="editor-mode-switch">
+                <label>
+                    <input type="radio" name="editor_mode" value="markdown" checked>
+                    Markdown编辑器
+                </label>
+                <label>
+                    <input type="radio" name="editor_mode" value="ubb">
+                    UBB编辑器（传统模式）
+                </label>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>✏️ Markdown编辑器</h2>
+            <div class="editor-wrapper markdown-editor-wrapper">
+                <div class="markdown-toolbar"></div>
+                <textarea class="markdown-editor" id="mdEditor" placeholder="在这里输入Markdown内容...">
+# 欢迎使用Markdown编辑器
+
+## 功能演示
+
+### 文本格式
+**粗体文本**
+*斜体文本*
+~~删除线~~
+
+### 列表
+- 无序列表项1
+- 无序列表项2
+  - 嵌套项
+
+1. 有序列表项1
+2. 有序列表项2
+
+### 链接和图片
+[访问GitHub](https://github.com)
+![示例图片](https://via.placeholder.com/150)
+
+### 代码示例
+
+行内代码：`console.log('Hello World')`
+
+JavaScript代码块：
+```javascript
+function hello() {
+    console.log('Hello, DVBBS!');
+    return true;
+}
+```
+
+Python代码块：
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+    return True
+```
+
+SQL代码块：
+```sql
+SELECT * FROM users
+WHERE status = 'active'
+ORDER BY created_at DESC;
+```
+
+### 引用
+> 这是一段引用文本
+> 可以多行显示
+
+### 表格（手动输入HTML）
+<table>
+<tr><th>功能</th><th>状态</th></tr>
+<tr><td>Markdown解析</td><td>✅</td></tr>
+<tr><td>代码高亮</td><td>✅</td></tr>
+<tr><td>实时预览</td><td>✅</td></tr>
+</table>
+
+---
+
+### 水平线
+上面就是一条水平线</textarea>
+                <div class="markdown-preview" style="display: block;"></div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📖 使用说明</h2>
+            <div style="background: #f9f9f9; padding: 15px; border-radius: 4px;">
+                <h3>快捷按钮：</h3>
+                <ul>
+                    <li><strong>B</strong> - 粗体</li>
+                    <li><strong>I</strong> - 斜体</li>
+                    <li><strong>S</strong> - 删除线</li>
+                    <li><strong>H1/H2/H3</strong> - 标题</li>
+                    <li><strong>🔗</strong> - 插入链接</li>
+                    <li><strong>🖼</strong> - 插入图片</li>
+                    <li><strong>&lt;&gt;</strong> - 代码块</li>
+                    <li><strong>•</strong> - 无序列表</li>
+                    <li><strong>1.</strong> - 有序列表</li>
+                    <li><strong>"</strong> - 引用</li>
+                    <li><strong>👁</strong> - 切换预览</li>
+                </ul>
+
+                <h3>支持的代码语言：</h3>
+                <p>javascript, python, java, html, css, sql, php, c, cpp, bash, json, xml 等</p>
+
+                <h3>在论坛中使用：</h3>
+                <ol>
+                    <li>复制 <code>inc/</code> 目录下的所有新文件到您的论坛</li>
+                    <li>在发帖页面引入：
+                        <pre style="background: #2d2d2d; color: #f8f8f2; padding: 10px; border-radius: 4px; overflow-x: auto;"><code>&lt;!--#include file="inc/Dv_Security.asp"--&gt;
+&lt;!--#include file="inc/Dv_Markdown.asp"--&gt;
+
+&lt;link rel="stylesheet" href="inc/markdown.css"&gt;
+&lt;script src="inc/markdown.js"&gt;&lt;/script&gt;
+&lt;script src="inc/highlight-embed.js"&gt;&lt;/script&gt;</code></pre>
+                    </li>
+                    <li>在textarea上添加class：<code>class="markdown-editor"</code></li>
+                    <li>编辑器会自动初始化</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>🔒 安全特性</h2>
+            <div style="background: #fff3cd; padding: 15px; border-radius: 4px; border-left: 4px solid #ffc107;">
+                <p><strong>已集成的安全防护：</strong></p>
+                <ul>
+                    <li>✅ XSS攻击防护 - 自动过滤危险HTML标签</li>
+                    <li>✅ SQL注入防护 - SafeSQL函数</li>
+                    <li>✅ CSRF防护 - Token验证机制</li>
+                    <li>✅ 文件上传安全 - 白名单验证</li>
+                    <li>✅ 内容安全过滤 - 移除script、iframe等</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>📚 相关文档</h2>
+            <ul>
+                <li><a href="../SECURITY_AND_MARKDOWN_GUIDE.md">完整使用指南</a></li>
+                <li><a href="../PROJECT_SUMMARY.md">项目总结</a></li>
+                <li><a href="../todolist.md">开发任务清单</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Markdown编辑器脚本 -->
+    <script src="inc/markdown.js"></script>
+
+    <!-- 代码高亮脚本（内嵌版本） -->
+    <script src="inc/highlight-embed.js"></script>
+
+    <script>
+        // 编辑器模式切换
+        document.querySelectorAll('input[name="editor_mode"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                var wrapper = document.querySelector('.markdown-editor-wrapper');
+                if (this.value === 'markdown') {
+                    wrapper.style.display = 'block';
+                    alert('已切换到Markdown编辑器');
+                } else {
+                    wrapper.style.display = 'none';
+                    alert('已切换到UBB编辑器（传统模式）');
+                }
+            });
+        });
+
+        // 显示加载成功信息
+        window.addEventListener('load', function() {
+            console.log('✅ Markdown编辑器加载完成');
+            console.log('✅ 代码高亮功能已启用');
+            console.log('✅ 支持的语言: JavaScript, Python, Java, HTML, CSS, SQL, PHP');
+        });
+    </script>
+</body>
+</html>

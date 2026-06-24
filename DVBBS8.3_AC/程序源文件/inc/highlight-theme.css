@@ -1,0 +1,173 @@
+/**
+ * Highlight.js 主题样式 - GitHub风格
+ * 内嵌版本，无需外部依赖
+ */
+
+/* 代码块基础样式 */
+.hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #24292e;
+    background: #f6f8fa;
+}
+
+/* 注释 */
+.hljs-comment {
+    color: #6a737d;
+    font-style: italic;
+}
+
+/* 关键字 */
+.hljs-keywords,
+.hljs-keyword {
+    color: #d73a49;
+    font-weight: bold;
+}
+
+/* 字符串 */
+.hljs-string {
+    color: #032f62;
+}
+
+/* 数字 */
+.hljs-number {
+    color: #005cc5;
+}
+
+/* 函数 */
+.hljs-function {
+    color: #6f42c1;
+    font-weight: bold;
+}
+
+/* 运算符 */
+.hljs-operator {
+    color: #d73a49;
+}
+
+/* HTML标签 */
+.hljs-tag {
+    color: #22863a;
+}
+
+/* HTML属性 */
+.hljs-attr {
+    color: #6f42c1;
+}
+
+/* CSS选择器 */
+.hljs-selector {
+    color: #6f42c1;
+    font-weight: bold;
+}
+
+/* CSS属性 */
+.hljs-property {
+    color: #005cc5;
+}
+
+/* CSS值 */
+.hljs-value {
+    color: #032f62;
+}
+
+/* 变量 (PHP, JavaScript等) */
+.hljs-variable {
+    color: #e36209;
+}
+
+/* 装饰器/注解 */
+.hljs-decorator,
+.hljs-annotation {
+    color: #6f42c1;
+}
+
+/* SQL关键字 */
+.hljs-sql .hljs-keywords {
+    color: #d73a49;
+    text-transform: uppercase;
+}
+
+/* !important */
+.hljs-important {
+    color: #d73a49;
+    font-weight: bold;
+}
+
+/* 深色主题（可选） */
+@media (prefers-color-scheme: dark) {
+    .hljs {
+        color: #e1e4e8;
+        background: #2d2d2d;
+    }
+
+    .hljs-comment {
+        color: #8b949e;
+    }
+
+    .hljs-keywords,
+    .hljs-keyword {
+        color: #ff7b72;
+    }
+
+    .hljs-string {
+        color: #a5d6ff;
+    }
+
+    .hljs-number {
+        color: #79c0ff;
+    }
+
+    .hljs-function {
+        color: #d2a8ff;
+    }
+
+    .hljs-operator {
+        color: #ff7b72;
+    }
+
+    .hljs-tag {
+        color: #7ee787;
+    }
+
+    .hljs-attr {
+        color: #d2a8ff;
+    }
+
+    .hljs-selector {
+        color: #d2a8ff;
+    }
+
+    .hljs-property {
+        color: #79c0ff;
+    }
+
+    .hljs-value {
+        color: #a5d6ff;
+    }
+
+    .hljs-variable {
+        color: #ffa657;
+    }
+
+    .hljs-decorator,
+    .hljs-annotation {
+        color: #d2a8ff;
+    }
+}
+
+/* 行号支持 */
+.hljs-line-numbers {
+    text-align: right;
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+    margin-right: 10px;
+    color: #999;
+    user-select: none;
+}
+
+/* 选中高亮 */
+.hljs-line-highlighted {
+    background-color: rgba(255, 255, 0, 0.1);
+}
